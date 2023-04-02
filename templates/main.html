@@ -9,21 +9,28 @@
     
     
     <!-- Favicon -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon" />
-
+    <style>
+        h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+        body {font-family: "Open Sans"}
+        </style>
     {% block page_css %} {% endblock %}
   </head>
 
-  <body class="bg-gray-100 dark:bg-gray-800 block" hidden>
-    {% block page_navbar %}
+  <body class="w3-light-grey">
+    <!-- {% block page_navbar %}
     {% include "components/navbar.html" %}
-    {% endblock %}
+    {% endblock %} -->
 
     {% block page_body %} {% endblock %}
 
-    {% block page_footer %}
+    <!-- {% block page_footer %}
     {% include "components/footer.html" %}
-    {% endblock %}
+    {% endblock %} -->
   </body>
   
   {% block page_scripts %} {% endblock %}
