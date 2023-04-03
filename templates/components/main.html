@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='css/experience.css')}}">
 
 <link rel="icon" href="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon" />
 <style>
@@ -38,9 +39,9 @@ body, html {
 
     {% block page_body %} {% endblock %}
 
-    <!-- {% block page_footer %}
+    {% block page_footer %}
     {% include "components/footer.html" %}
-    {% endblock %} -->
+    {% endblock %}
   </body>
   
   {% block page_scripts %} {% endblock %}
