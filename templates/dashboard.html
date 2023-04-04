@@ -3,7 +3,7 @@
 {% block page_body %}
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="top">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Arsalan Anwar</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Arsalan Anwar</span><br>
@@ -11,38 +11,42 @@
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Know more</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-black w3-large" style="padding:24px 48px">
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <i class="fa fa-medium w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-github w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    
+    <a href="https://www.linkedin.com/in/arsalan-anwar-ai" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://thearsalion.medium.com/" target="_blank"><i class="fa fa-medium w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/datasciencecrew" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://github.com/arsalananwar11" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>    
   </div>
 </header>
 
 
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
+<!-- About Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
   <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+    <div class="w3-col m8">
+      <h3>About Arsalan</h3>
+      <p>
+        Arsalan is a data science enthusiast who is currently working as a Data Scientist in a 
+        Martket Intelligence MNC based out of Bangalore, India. He is the founder and researcher at 
+        Data Science Crew which is a platform for data science enthusiasts to collaborate and work on 
+        exciting AI/ML problems. Arsalan is also an Adjunct Faculty at Intellipaat where he handles few 
+        Data Science PGP programs which are in collaboration with MIT and IIT-M.
+      </p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Know more</a></p>
     </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+    <div class="w3-col m4">
+      <img class="w3-image w3-round-large" src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="About" width="200" height="220">
     </div>
   </div>
 </div>
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
+<!-- Projects Section -->
+<div class="w3-container" style="padding:128px 16px" id="projects">
+  <h3 class="w3-center">Projects</h3>
+  <p class="w3-center w3-large">Here are some of the projects implemented by Arsalan</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="John" style="width:100%">
         <div class="w3-container">
           <h3>John Doe</h3>
           <p class="w3-opacity">CEO & Founder</p>
@@ -53,7 +57,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Jane" style="width:100%">
         <div class="w3-container">
           <h3>Anja Doe</h3>
           <p class="w3-opacity">Art Director</p>
@@ -64,7 +68,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Mike" style="width:100%">
         <div class="w3-container">
           <h3>Mike Ross</h3>
           <p class="w3-opacity">Web Designer</p>
@@ -75,7 +79,7 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <img src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Dan" style="width:100%">
         <div class="w3-container">
           <h3>Dan Star</h3>
           <p class="w3-opacity">Designer</p>
