@@ -2,8 +2,12 @@ import sqlite3
 
 class DatabaseActions:
     def __init__(self, db_name) -> None:
-        # Connect to DB and create a cursor
-        self.sqliteConnection = sqlite3.connect(db_name)
+        # Connect to DB and create a cursor [Production]
+        db_connection_string = '/home/arsalananwar/Arsalan-Portfolio/' + db_name
+        self.sqliteConnection = sqlite3.connect(db_connection_string)
+
+        # Connect to DB and create a cursor [Local]
+        # self.sqliteConnection = sqlite3.connect(db_name)
         print('[SUCCESS] DB Initialized')
     
     def add_message(self, requestor_message ):
