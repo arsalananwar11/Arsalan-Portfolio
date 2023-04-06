@@ -1,12 +1,13 @@
 import sqlite3
 
 class DatabaseActions:
-    def __init__(self, db_name) -> None:
-        # Create a cursor [Production]
-        db_connection_string = '/home/arsalananwar/Arsalan-Portfolio/' + db_name
-
-        # Create a cursor [Local]
-        # db_connection_string = db_name
+    def __init__(self, db_name, environment = 'prod') -> None:
+        if environment == 'prod':
+            # Create a cursor [Production]
+            db_connection_string = '/home/arsalananwar/Arsalan-Portfolio/' + db_name
+        elif environment == 'dev':
+            # Create a cursor [Dev]
+            db_connection_string = db_name
 
         # Connect to DB
         self.sqliteConnection = sqlite3.connect(db_connection_string)

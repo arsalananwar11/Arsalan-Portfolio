@@ -13,10 +13,12 @@ from db_helper import DatabaseActions
 
 app = Flask(__name__)
 
+ENV = 'prod' # development or production
+
 @app.route("/")
 @app.route("/dashboard")
 def dashboard():
-    db_action_obj = DatabaseActions('arsalan_site_db.db')
+    db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
     featured_projects_list = db_action_obj.fetch_featured_projects()
     db_action_obj.close_db_connection()
     return render_template("dashboard.html", featured_projects_list = featured_projects_list)
@@ -33,7 +35,7 @@ def send_message():
         requestor_email = request.form['Email']
         requestor_subject = request.form['Subject']
         requestor_message = request.form['Message']
-        db_action_obj = DatabaseActions('arsalan_site_db.db')
+        db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
         requestor_message = (requestor_email, requestor_name, requestor_subject, requestor_message)
         db_action_obj.add_message(requestor_message)
         db_action_obj.close_db_connection()
@@ -46,7 +48,7 @@ def send_message():
 
 @app.route("/projects")
 def projects():
-    db_action_obj = DatabaseActions('arsalan_site_db.db')
+    db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
     all_projects_list = db_action_obj.fetch_all_projects()
     db_action_obj.close_db_connection()
 
