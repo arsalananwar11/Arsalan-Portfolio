@@ -16,7 +16,10 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html")
+    db_action_obj = DatabaseActions('arsalan_site_db.db')
+    featured_projects_list = db_action_obj.fetch_featured_projects()
+    db_action_obj.close_db_connection()
+    return render_template("dashboard.html", featured_projects_list = featured_projects_list)
 
 
 @app.route("/experience")
@@ -33,6 +36,18 @@ def send_message():
         db_action_obj = DatabaseActions('arsalan_site_db.db')
         requestor_message = (requestor_email, requestor_name, requestor_subject, requestor_message)
         db_action_obj.add_message(requestor_message)
+        db_action_obj.close_db_connection()
+
+        # TBD: Send success op response
         return render_template("dashboard.html")
     else:
+        # TBD: Send error op response
         return render_template("dashboard.html")
+
+@app.route("/projects")
+def projects():
+    db_action_obj = DatabaseActions('arsalan_site_db.db')
+    all_projects_list = db_action_obj.fetch_all_projects()
+    db_action_obj.close_db_connection()
+
+    return render_template("projects.html", all_projects_list = all_projects_list)

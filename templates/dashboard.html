@@ -44,60 +44,23 @@
   <h3 class="w3-center"><strong>Projects</strong></h3>
   <p class="w3-center w3-large">Here are some of the projects implemented by Arsalan</p>
   <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./../static/img/aqua.png" class="project-cover" alt="Project" style="width:100%">
-        <div class="w3-container">
-          <h5>Aqua Analytica: Water Demand Forecast Analytics</h5>
-          <p class="w3-opacity">Time Series, Data Analytics</p>
-          <p>A Water Consumption Analytics System for Bengaluru using advanced ML techniques such as ARIMA, SARIMA & Holt-Winters for forecasting</p>
-          <p>
-            <a href="https://aquaanalytica.pythonanywhere.com/"  class="know-more" target="_blank">
-              <button class="w3-button w3-light-grey w3-block"><i class="fa fa-rocket"></i> Explore</button>
-            </a>
-          </p>
+    {%for project in featured_projects_list%}
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="./../static/img/{{project[6]}}" class="project-cover" alt="Project" style="width:100%">
+            <div class="w3-container">
+                <h5>{{project[1]}}</h5>
+                <p class="w3-opacity">{{project[3]}}</p>
+                <p>{{project[2]}}</p>
+                <p>
+                  <a href={{project[4]}}  class="know-more" target="_blank">
+                      <button class="w3-button w3-light-grey w3-block"><i class="fa fa-rocket"></i> Explore</button>
+                  </a>
+                </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./../static/img/ros.jpg" class="project-cover" alt="Project" style="width:100%">
-        <div class="w3-container">
-          <h5>Autonomous Robot Navigation using RL</h5>
-          <p class="w3-opacity">Reinforcement Learning, ROS</p>
-          <p>Trained a Turtlebot3 Waffle Pi to autonomously navigate through the manufacturing 
-            plant without collision using DQN algorithm and human intervention data for faster learning</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-rocket"></i> Explore</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./../static/img/defectdetection.jpg" class="project-cover" alt="Project" style="width:100%">
-        <div class="w3-container">
-          <h5>Defect Detection in Stopper Production Line</h5>
-          <p class="w3-opacity">Computer Vision, Deep Learning</p>
-          <p>Designed a scalable architecture to identify and classify defects on the elastomer stoppers using 
-            XceptionNet model with an accuracy of ~92%</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-rocket"></i> Explore</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="./../static/img/mumkinfoods.jpg" class="project-cover" alt="Project" style="width:100%">
-        <div class="w3-container">
-          <h5>Mum & Kin Food Services: An E-commerce platform</h5>
-          <p class="w3-opacity">DBMS, Web Application</p>
-          <p>An E-commerce platform that allows people to order delicious and nutritious home-made food by connecting foodies with
-            cooking enthusiasts.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-rocket"></i> Explore</button></p>
-        </div>
-      </div>
-    </div>
+      {%endfor%}
   </div>
 </div>
 
