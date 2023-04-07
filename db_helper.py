@@ -69,6 +69,23 @@ class DatabaseActions:
         except sqlite3.Error as error:
             print('[ERROR] Error occurred while fetching the featured projects - ', error)
 
+    def fetch_requested_project(self, project_id):
+        try:
+            self.connection_obj = self.sqliteConnection.cursor()
+            query = """SELECT * FROM PROJECTS WHERE ProjectId = ?"""
+            self.connection_obj.execute(query, project_id)
+            
+            requested_project = self.connection_obj.fetchall()
+            self.sqliteConnection.commit()
+            print(f"[SUCCESS] Project successfully fetched")
+            self.connection_obj.close()
+
+            return requested_project[0]
+
+        # Handle errors
+        except sqlite3.Error as error:
+            print('[ERROR] Error occurred while fetching all the projects - ', error)
+
     def close_db_connection(self):
         # Close DB Connection irrespective of success or failure
         if self.sqliteConnection:
