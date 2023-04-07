@@ -13,7 +13,7 @@ from db_helper import DatabaseActions
 
 app = Flask(__name__)
 
-ENV = 'prod' # development or production
+ENV = 'dev' # development or production
 
 @app.route("/")
 @app.route("/dashboard")
@@ -53,3 +53,11 @@ def projects():
     db_action_obj.close_db_connection()
 
     return render_template("projects.html", all_projects_list = all_projects_list)
+
+@app.route("/project/<project_id>", methods=['GET'])
+def project(project_id):
+    db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
+    requested_project = db_action_obj.fetch_requested_project(project_id)
+    db_action_obj.close_db_connection()
+
+    return render_template("project_dashboard.html", project = requested_project)
