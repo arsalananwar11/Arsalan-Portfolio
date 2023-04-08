@@ -13,13 +13,13 @@
             <p>
                 {{project[2]}}
             </p>
-            <p><a href="{{project[4]}}" class="w3-button w3-black"><i class="fa fa-rocket"></i> Explore</a></p>
+            <p><a href="{{project[5]}}" class="w3-button w3-black"><i class="fa fa-rocket"></i> Explore</a></p>
           </div>
           <div class="w3-col m1">
             <p></p>
           </div>
           <div class="w3-col m4">
-            <img class="w3-image w3-round-large" src="./../static/img/{{project[6]}}" alt="Project Cover" width="350">
+            <img class="w3-image w3-round-large" src="./../static/img/{{project[7]}}" alt="Project Cover" width="350">
           </div>
         </div>
       </div>
@@ -39,14 +39,16 @@
         </div>
       </div>
       <hr>
+      <p id="project-id" hidden>{{ project[0] }}</p>
       
       <h4><strong>Description</strong></h4>
-        <button id="on">Enable</button>
-        <button id="off">Disable</button>
+        <button id="edit-project-description">Edit</button>
+        <button id="save-project-description" hidden>Save</button>
+        <button id="cancel-project-description" hidden>Cancel</button>
 
         <div id="project-container">
             <div id="project-body">
-                <p>{{project[2]}}</p>
+                {{ project[3]|safe }}
             </div>
         </div>
         <hr/>

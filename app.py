@@ -41,10 +41,10 @@ def send_message():
         db_action_obj.close_db_connection()
 
         # TBD: Send success op response
-        return render_template("dashboard.html")
+        return redirect("/dashboard")
     else:
         # TBD: Send error op response
-        return render_template("dashboard.html")
+        return redirect("/dashboard")
 
 @app.route("/projects")
 def projects():
@@ -61,3 +61,21 @@ def project(project_id):
     db_action_obj.close_db_connection()
 
     return render_template("project_dashboard.html", project = requested_project)
+
+@app.route('/save_project_description', methods=['POST'])
+def save_project_description():
+    if request.method == 'POST':
+        project_details = request.get_json()
+        project_id = project_details['project_id']
+        project_description = project_details['project_description']
+        db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
+        project_update_status = db_action_obj.update_project_description(project_id, project_description)
+        db_action_obj.close_db_connection()
+
+        if(project_update_status):
+            return jsonify(project_description)
+        else:
+            error_message = 'Some error occured while updating the project description. Please refresh.'
+            return jsonify(error_message)
+        
+    return render_template("dashboard.html")

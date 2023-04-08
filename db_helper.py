@@ -20,7 +20,7 @@ class DatabaseActions:
             self.connection_obj.execute(query, requestor_message)
             
             self.sqliteConnection.commit()
-            print(f"[SUCCESS] Message with the following details added:\nEmail: { requestor_message[0] }\nName: { requestor_message[1] }\nSubject: { requestor_message[2] }\nMessage: { requestor_message[3] }")
+            print(f"[SUCCESS] { requestor_message[1] }'s message added")
             self.connection_obj.close()
 
         # Handle errors
@@ -85,6 +85,25 @@ class DatabaseActions:
         # Handle errors
         except sqlite3.Error as error:
             print('[ERROR] Error occurred while fetching all the projects - ', error)
+
+    def update_project_description(self, project_id, project_description):
+        try:
+            self.connection_obj = self.sqliteConnection.cursor()
+            query = f"""UPDATE PROJECTS SET PROJECTDESCRIPTION = ? WHERE PROJECTID = ?"""
+            self.connection_obj.execute(query, (project_description, project_id))
+            
+            self.sqliteConnection.commit()
+            print(f"[SUCCESS] Project with ID: { project_id } updated")
+            self.connection_obj.close()
+
+            return 1
+
+        # Handle errors
+        except sqlite3.Error as error:
+            print('[ERROR] Error occurred while updating the project- ', error)
+            print(f"[ERROR] Project details:\nProject ID: { project_id }\nProject Description: { project_description }")
+
+            return 0
 
     def close_db_connection(self):
         # Close DB Connection irrespective of success or failure
