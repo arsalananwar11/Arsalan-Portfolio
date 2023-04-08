@@ -2,36 +2,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Arsalan Anwar</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename='css/experience.css')}}">
+  <title>Arsalan Anwar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/experience.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/project_dashboard.css')}}">
 
-<link rel="icon" href="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon" />
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon" />
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
-  min-height: 100%;
-}
+  /* Full height image header */
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+    min-height: 100%;
+  }
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  </style>
 </head>
 <body>
     {% block page_navbar %}
@@ -46,6 +48,6 @@ body, html {
   </body>
   
   {% block page_scripts %} {% endblock %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 </html>

@@ -13,7 +13,7 @@ from db_helper import DatabaseActions
 
 app = Flask(__name__)
 
-ENV = 'dev' # development or production
+ENV = 'prod' # development or production
 
 @app.route("/")
 @app.route("/dashboard")
