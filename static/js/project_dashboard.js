@@ -26,6 +26,9 @@ projectContainer.classList.add('inactive');
 quill.enable(false);
 $("#save-project-description").attr("style", "display:none");
 $("#cancel-project-description").attr("style", "display:none");
+$(function () {
+    $("[rel='tooltip']").tooltip();
+});
 
 $("#edit-project-description").click(function (e) {
     projectContainer.classList.remove('inactive');
