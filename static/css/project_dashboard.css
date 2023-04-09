@@ -5,7 +5,7 @@
   
   .inactive .ql-editor p {
     padding:inherit;
-    margin-bottom:10px;
+    margin-bottom:1.5em;
   }
   
   .inactive .ql-toolbar {
@@ -17,3 +17,15 @@
     font-family:inherit;
     font-size:inherit;
   }
+
+  .icon-bar {
+    display: inline-block; 
+    margin-left: 1em;
+  }
+
+.project-description-icon {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    font-size: 0.9em;
+    vertical-align: middle;
+}

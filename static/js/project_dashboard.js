@@ -24,19 +24,21 @@ projectContainer = document.getElementById('project-container'),
 var quill = new Quill(projectBody, options);
 projectContainer.classList.add('inactive');
 quill.enable(false);
+$("#save-project-description").attr("style", "display:none");
+$("#cancel-project-description").attr("style", "display:none");
 
 $("#edit-project-description").click(function (e) {
     projectContainer.classList.remove('inactive');
     quill.enable(true);
     $("#edit-project-description").attr("style", "display:none");
-    $("#save-project-description").attr("style", "display:block");
-    $("#cancel-project-description").attr("style", "display:block");
+    $("#save-project-description").attr("style", "display:inline-block");
+    $("#cancel-project-description").attr("style", "display:inline-block");
 });
 
 $("#cancel-project-description").click(function (e) {
     projectContainer.classList.add('inactive');
     quill.enable(false);
-    $("#edit-project-description").attr("style", "display:block");
+    $("#edit-project-description").attr("style", "display:inline-block");
     $("#save-project-description").attr("style", "display:none");
     $("#cancel-project-description").attr("style", "display:none");
 });

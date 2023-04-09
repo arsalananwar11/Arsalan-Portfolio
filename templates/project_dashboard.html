@@ -14,7 +14,7 @@
             <p>
                 {{project[2]}}
             </p>
-            <p><a href="{{project[5]}}" class="w3-button w3-black"><i class="fa fa-rocket"></i> Explore</a></p>
+            <p><a href="{{project[5]}}" class="w3-button w3-black"><i class="fa fa-external-link"></i> Explore</a></p>
           </div>
           <div class="w3-col m1">
             <p></p>
@@ -42,10 +42,15 @@
       <hr>
       <p id="project-id" hidden>{{ project[0] }}</p>
       
-      <h4><strong>Description</strong></h4>
-        <button id="edit-project-description">Edit</button>
-        <button id="save-project-description" hidden>Save</button>
-        <button id="cancel-project-description" hidden>Cancel</button>
+      
+        <h4>
+          <strong>Description</strong>
+          <div class="icon-bar">
+            <a id="edit-project-description" class="project-description-icon"><i class="fa fa-pencil-square-o"></i></a>
+            <a id="save-project-description" class="project-description-icon"><i class="fa fa-save"></i></a>
+            <a id="cancel-project-description" class="project-description-icon"><i class="fa fa-ban"></i></a>
+          </div>
+        </h4> 
 
         <div id="project-container">
             <div id="project-body">
