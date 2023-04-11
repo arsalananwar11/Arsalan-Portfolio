@@ -95,7 +95,7 @@ body{
   align-items: center;
   justify-content: space-between;
 }
-.row section .details .title{
+.row section .details .experience-designation{
   font-size: 18px;
   font-weight: 600;
 }
@@ -149,4 +149,13 @@ hr {
 }
 p {
   font-size: 14px;
+}
+
+.experience-org {
+  font-size: 11px;
+  color: #464645;
+}
+
+.experience-description {
+  font-size: 12px;
 }
