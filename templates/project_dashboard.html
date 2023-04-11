@@ -14,12 +14,12 @@
             <p>
                 {{project[2]}}
             </p>
-            <p><a href="{{project[5]}}" class="w3-button w3-black"><i class="fa fa-external-link"></i> Explore</a></p>
+            <p><a href="{{project[5]}}" class="w3-button w3-black"><i class="fa fa-external-link"></i> &nbsp;View Project</a></p>
           </div>
           <div class="w3-col m1">
             <p></p>
           </div>
-          <div class="w3-col m4">
+          <div class="w3-col m4"> 
             <img class="w3-image w3-round-large" src="./../static/img/{{project[7]}}" alt="Project Cover" width="350">
           </div>
         </div>
@@ -27,22 +27,20 @@
     
   
     <div class="w3-container" style="padding:16px 75px 50px 75px">
+
+      <!-- Project Skills -->
       <h4><strong>Skills/ Technologies</strong></h4>
       <div class="w3-row w3-large">
-        <div class="w3-col s6">
-          <p><i class="fa fa-fw fa-clock-o"></i> Python</p>
-          <p><i class="fa fa-fw fa-clock-o"></i> NLP</p>
-          <p><i class="fa fa-fw fa-clock-o"></i> Time Series Forecasting</p>
+        {% for skill in project[8].split(',') %}
+        <div class="w3-col m3">
+          <p><i class="fa fa-check"></i> {{ skill }}</p>
         </div>
-        <div class="w3-col s6">
-          <p><i class="fa fa-fw fa-clock-o"></i> Churn Analysis</p>
-          <p><i class="fa fa-fw fa-clock-o"></i> Deep Learning</p>
-        </div>
+        {% endfor %}
       </div>
       <hr>
+
+      <!-- Project Description -->
       <p id="project-id" hidden>{{ project[0] }}</p>
-      
-      
         <h4>
           <strong>Description</strong>
           <div class="icon-bar">
