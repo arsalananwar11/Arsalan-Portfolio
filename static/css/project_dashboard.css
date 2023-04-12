@@ -5,7 +5,7 @@
   
   .inactive .ql-editor p {
     padding:inherit;
-    margin-bottom:1.5em;
+    margin-bottom:0.5em;
   }
   
   .inactive .ql-toolbar {
@@ -29,4 +29,8 @@
     font-size: 0.9em;
     vertical-align: middle;
     cursor: pointer;
+}
+
+#project-body {
+  font-size: 1em;
 }
