@@ -60,7 +60,7 @@ def project(project_id):
     requested_project = db_action_obj.fetch_requested_project(project_id)
     db_action_obj.close_db_connection()
 
-    return render_template("project_dashboard.html", project = requested_project)
+    return render_template("project_dashboard.html", project = requested_project, access = ENV)
 
 @app.route('/save_project_description', methods=['POST'])
 def save_project_description():

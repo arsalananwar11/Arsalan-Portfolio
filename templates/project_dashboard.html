@@ -47,11 +47,13 @@
       <p id="project-id" hidden>{{ project[0] }}</p>
         <h4>
           <strong>Description</strong>
+          {% if access == 'dev' %}
           <div class="icon-bar">
             <a id="edit-project-description" class="project-description-icon"><i class="fa fa-pencil-square-o" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
             <a id="save-project-description" class="project-description-icon" data-toggle="tooltip" data-placement="top" title="Save"><i class="fa fa-save"></i></a>
             <a id="cancel-project-description" class="project-description-icon" data-toggle="tooltip" data-placement="top" title="Cancel"><i class="fa fa-ban"></i></a>
           </div>
+          {% endif %}
         </h4> 
 
         <div id="project-container">
