@@ -104,6 +104,26 @@ class DatabaseActions:
             print(f"[ERROR] Project details:\nProject ID: { project_id }\nProject Description: { project_description }")
 
             return 0
+        
+    def fetch_experience_details(self):
+        try:
+            self.connection_obj = self.sqliteConnection.cursor()
+            query = """SELECT * FROM EXPERIENCE ORDER BY PRIORITY;"""
+            self.connection_obj.execute(query)
+            
+            experience_details = self.connection_obj.fetchall()
+            experience_details_list = []
+            for project in experience_details:
+                experience_details_list.append(project)
+
+            self.sqliteConnection.commit()
+            print(f"[SUCCESS] Experience details successfully fetched")
+            self.connection_obj.close()
+            return experience_details_list
+
+        # Handle errors
+        except sqlite3.Error as error:
+            print('[ERROR] Error occurred while fetching the experience details - ', error)
 
     def close_db_connection(self):
         # Close DB Connection irrespective of success or failure

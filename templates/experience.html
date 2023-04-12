@@ -7,87 +7,35 @@
       <a href="#" class="scroll-icon"><i class="fa fa-caret-up fa-bounce"></i></a>
     </div>
 
-    <!-- Course5i -->
-    <div class="row row-1">
-      <section>
-        <img class="icon" src="static/img/course5i.jpg"></img>
-        <div class="details">
-          <span class="title">Data Scientist</span>
-          <span>Feb 2023 - Present</span>
-        </div>
-        <hr/>
-        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
-        <div class="bottom">
-          <a href="#">Read more</a>
-          <div>
-            <i class='fa fa-briefcase'></i>
-            <i> Course5 Intelligence</i>
+    {% for i in range(experience_details_list|length) %} 
+      {% set experience = experience_details_list[i] %}
+      {% set row_number = row_index_list[i] %}
+      
+      <div class="row row-{{ row_number }}">
+        <section>
+          <img class="icon" src="static/img/{{ experience[8]}}"></img>
+          <div class="details">
+            <span class="experience-designation">{{ experience[1]}}</span>
+            <span class="experience-duration">{{ experience[3]}} - {{ experience[4]}}</span>
           </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Intellipaat -->
-    <div class="row row-2">
-      <section>
-        <img class="icon" src="static/img/intellipaat.jpg"></img>
-        <div class="details">
-          <span class="title">Adjunct Faculty</span>
-          <span>Jan 2023 - Present</span>
-        </div>
-        <hr/>
-        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
-        <div class="bottom">
-          <a href="#">Read more</a>
-          <div>
+          <div class="experience-org">
             <i class='fa fa-briefcase'></i>
-            <i>Intellipaat</i>
+            <i>{{ experience[2]}}</i>
           </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- West Pharmaceutical Services -->
-    <div class="row row-1">
-      <section>
-        <img class="icon" src="static/img/westpharma.jpg"></img>
-        <div class="details">
-          <span class="experience-designation">Data Scientist</span>
-          <span class="experience-duration">Aug 2022 - Feb 2023</span>
-        </div>
-        <div class="experience-org">
-          <i class='fa fa-briefcase'></i>
-          <i>West Pharmaceutical Services</i>
-        </div>
-        <hr/>
-        <div class="experience-description">
-          <ol><li><strong>Employee Greetings Web Service:</strong> Developed a serverless web service that sends greetings to the employees on their birthdays and job anniversaries using Azure Logic Apps and Function Apps.</li><li><strong>Digital Desk Management: </strong>Contributed to developing the application using .NET MVC Core which helps the HR team manage office spaces efficiently. This application has an internal proximity check in place which allows for safe distance seating during the pandemic.</li><li><strong>Particulate Study: </strong>The problem was to classify various particles present on the container products like silicone oil particles, protein particles, etc.</li></ol><ul><li class="ql-indent-1">Modelled, evaluated, packaged, and deployed classification models for both structured and unstructured data using Azure ML and Azure Function Apps.</li><li class="ql-indent-1">Achieved an accuracy of ~97% which was then used by the Lab Analysis team who were earlier classifying the particles manually.</li></ul>
-        </div>
-        <div class="bottom">
-          <a href="#">Read more</a>
-        </div>
-      </section>
-    </div>
-    <div class="row row-1">
-      <section>
-        <img class="icon" src="static/img/westpharma.jpg"></img>
-        <div class="details">
-          <span class="experience-designation">Associate Data Scientist</span>
-          <span class="experience-duration">Jul 2020 - Jul 2022</span>
-        </div>
-        <div class="experience-org">
-          <i class='fa fa-briefcase'></i>
-          <i>West Pharmaceutical Services</i>
-        </div>
-        <hr/>
-        <div class="experience-description">
-          <ol><li><strong>Employee Greetings Web Service:</strong> Developed a serverless web service that sends greetings to the employees on their birthdays and job anniversaries using Azure Logic Apps and Function Apps.</li><li><strong>Digital Desk Management: </strong>Contributed to developing the application using .NET MVC Core which helps the HR team manage office spaces efficiently. This application has an internal proximity check in place which allows for safe distance seating during the pandemic.</li><li><strong>Particulate Study: </strong>The problem was to classify various particles present on the container products like silicone oil particles, protein particles, etc.</li></ol><ul><li class="ql-indent-1">Modelled, evaluated, packaged, and deployed classification models for both structured and unstructured data using Azure ML and Azure Function Apps.</li><li class="ql-indent-1">Achieved an accuracy of ~97% which was then used by the Lab Analysis team who were earlier classifying the particles manually.</li></ul>
-        </div>
-        <div class="bottom">
-          <a href="#">Read more</a>
-        </div>
-      </section>
-    </div>
+          <hr/>
+          <div class="experience-description">
+            {{ experience[6]|safe }}
+          </div>
+          <hr>
+          <!-- <div class="bottom">
+            <a href="#">Read more</a>
+          </div> -->
+        </section>
+      </div>
+      
+      
+    {% endfor %}
+    <!-- Course5i
     <div class="row row-1">
       <section>
         <img class="icon" src="static/img/westpharma.jpg"></img>
@@ -107,7 +55,7 @@
           <a href="#">Read more</a>
         </div>
       </section>
-    </div>
+    </div> -->
   </div>
 
   {% endblock %}

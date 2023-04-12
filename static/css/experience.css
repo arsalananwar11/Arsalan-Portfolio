@@ -36,7 +36,7 @@ body{
 .wrapper .row-1{
   justify-content: flex-start;
 }
-.wrapper .row-2{
+.wrapper .row-0{
   justify-content: flex-end;
 }
 .wrapper .row section{
@@ -59,7 +59,7 @@ body{
 .row-1 section::before{
   right: -7px;
 }
-.row-2 section::before{
+.row-0 section::before{
   left: -7px;
 }
 .row section .icon,
@@ -85,7 +85,7 @@ body{
   top: 15px;
   right: -60px;
 }
-.row-2 section .icon{
+.row-0 section .icon{
   top: 15px;
   left: -60px;
 }
@@ -96,7 +96,7 @@ body{
   justify-content: space-between;
 }
 .row section .details .experience-designation{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 .row section p{
@@ -152,10 +152,18 @@ p {
 }
 
 .experience-org {
-  font-size: 11px;
+  font-size: 12px;
   color: #464645;
 }
 
 .experience-description {
-  font-size: 12px;
+  font-size: 0.9em;
+}
+
+.ql-indent-1 {
+  margin-left: 12px;
+}
+
+.experience-duration {
+  font-size: 14px;
 }
