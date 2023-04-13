@@ -1,15 +1,12 @@
 from flask import (
     Flask,
     render_template,
-    send_from_directory,
     jsonify,
     redirect,
-    request,
-    session,
-    make_response,
-    abort,
+    request
 )
 from db_helper import DatabaseActions
+from general_helper import GeneralHelper
 
 app = Flask(__name__)
 
@@ -26,7 +23,12 @@ def dashboard():
 
 @app.route("/experience")
 def experience():
-    return render_template("experience.html")
+    db_action_obj = DatabaseActions('arsalan_site_db.db', ENV)
+    experience_details_list = db_action_obj.fetch_experience_details()
+    db_action_obj.close_db_connection()
+    # Get the row index for UI alignment
+    row_index_list = GeneralHelper().get_experience_row_index(experience_details_list)
+    return render_template("experience.html", experience_details_list = experience_details_list, row_index_list = row_index_list)
 
 @app.route("/send_message", methods=['POST'])
 def send_message():
