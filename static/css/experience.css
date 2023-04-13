@@ -167,3 +167,8 @@ p {
 .experience-duration {
   font-size: 14px;
 }
+
+.experience-type {
+  float: right;
+  font-style: italic;
+}
