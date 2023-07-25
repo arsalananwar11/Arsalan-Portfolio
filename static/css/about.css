@@ -7,8 +7,14 @@ img {vertical-align: middle;}
     max-width: 800px;
     max-height: 400px;
     position: relative;
-    margin-top: 120px;
+    margin-top: 18%;
     margin-right: 30px;
+}
+
+.mySlides-img {
+    width:100%; 
+    height: 350px; 
+    border: 10px #f5e9e2 solid
 }
 
 /* Caption text */
@@ -33,8 +39,8 @@ img {vertical-align: middle;}
 
 /* The dots/bullets/indicators */
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
   background-color: #6c0b0b;
   border-radius: 50%;
@@ -49,7 +55,7 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.0s;
 }
 
 @keyframes fade {
