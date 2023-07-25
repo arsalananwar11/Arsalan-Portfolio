@@ -20,6 +20,9 @@ def dashboard():
     db_action_obj.close_db_connection()
     return render_template("dashboard.html", featured_projects_list = featured_projects_list)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 @app.route("/experience")
 def experience():
