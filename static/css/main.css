@@ -1,0 +1,114 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+.primary-color {
+  background-color: #212A3E;
+}
+
+.secondary-color {
+  background-color: #770c0c;
+}
+
+.base-bg-color-1 {
+  background-color: #DDDDDD;
+}
+
+.base-bg-color-2 {
+  background-color: #cad5d1;
+}
+
+.card-bg-color {
+  background-color: #394867;
+}
+
+.text-white {
+  color: #f8f8f8;
+}
+
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
+
+  /* Full height image header */
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    min-height: 90%;
+  }
+
+  .cover-text-segment {
+    padding-left: 40px;
+  }
+
+  .cover-name-text {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 40px;
+    color: #04060c;
+  }
+
+  .cover-name-desc {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 40px;
+    color: #430000;
+  }
+
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+
+  .project-cover {
+    height: 170px;
+}
+
+.project-title{
+    height: 60px;
+}
+
+.category-tag {
+    font-size: 12px;
+    height: 20px;
+}
+
+.project-desc{
+    height: 115px;
+    font-size: 0.9em;
+}
+
+#project-body {
+    font-size: 1em;
+  }
+
+  .know-more {
+    text-decoration: none;
+}
+
+.about {
+    padding: 0px 70px;
+}
+
+.about-pic {
+    float: right;
+}
+
+.margin-2 {
+    margin: 2px;
+}
+
+.about-btn {
+    width: 115px;
+}
+
+.primary-color-btn:hover {
+  background-color: #0d1018 !important;
+  color: #f8f8f8 !important;
+  transform: scale(1.05) !important;
+}
+
+.secondary-color-btn:hover {
+  background-color: #330404 !important;
+  color: #f8f8f8 !important;
+  transform: scale(1.05) !important;
+}

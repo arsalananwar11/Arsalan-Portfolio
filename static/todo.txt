@@ -1,0 +1,15 @@
+- Add complete list of skills under a project as a column in db - done
+- Render this list on the project dashboard - done
+- Make experience dynamic - done
+- Optimize resume (check on Resume Worded) - done
+- Add experience description for all roles - done
+
+
+- Add about page
+- Add research section
+- Add events/seminars section
+- Add blogs section
+- Add gallery section
+- Add project descriptions for all projects - 3,4,5 remaining
+- Add resume
+

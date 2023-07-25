@@ -31,6 +31,18 @@
     cursor: pointer;
 }
 
-#project-body {
-  font-size: 1em;
-}
+/* .project-hr {
+  height: 1px;
+  background-color: #ff0000;
+  border: none;
+} */
+
+.project-hr {
+  border: 0;
+  height: 1px;
+  background: #770c0c;
+  background-image: -webkit-linear-gradient(left, #f8dbdb, #ff0000, #f8dbdb);
+  background-image: -moz-linear-gradient(left, #f8dbdb, #ff0000, #f8dbdb);
+  background-image: -ms-linear-gradient(left, #f8dbdb, #ff0000, #f8dbdb);
+  background-image: -o-linear-gradient(left, #f8dbdb, #ff0000, #f8dbdb);
+  }

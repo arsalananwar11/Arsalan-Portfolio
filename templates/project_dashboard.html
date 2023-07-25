@@ -7,15 +7,15 @@
 <script src="../static/js/quill_image_resize.min.js"></script>
 
 <div class="w3-main w3-white">
-    <div class="w3-container w3-light-grey" style="padding:100px 16px 50px 50px" id="project-brief">
+    <div class="w3-container card-bg-color" style="padding:100px 16px 50px 50px" id="project-brief">
         <div class="w3-row-padding">
-          <div class="w3-col m7">
+          <div class="w3-col m7 text-white">
             <h3>{{project[1]}}</h3>
             <p>
                 {{project[2]}}
             </p>
             <p>
-              <a href="{{project[5]}}" class="w3-button w3-black" target="_blank">
+              <a href="{{project[5]}}" class="w3-button secondary-color secondary-color-btn" target="_blank">
                 <i class="fa fa-external-link"></i> &nbsp;View Project
               </a>
             </p>
@@ -41,8 +41,8 @@
         </div>
         {% endfor %}
       </div>
-      <hr>
-
+      <hr class="project-hr">
+      
       <!-- Project Description -->
       <p id="project-id" hidden>{{ project[0] }}</p>
         <h4>
@@ -63,8 +63,8 @@
         </div>
         <hr/>
 
-        <p>Subscribe to follow this project</p>
-        <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Subscribe</button></p>
+        <p class="text-white">Subscribe to follow this project</p>
+        <p><button class="w3-button primary-color w3-third" onclick="document.getElementById('subscribe').style.display='block'">Subscribe</button></p>
     </div>
     
  

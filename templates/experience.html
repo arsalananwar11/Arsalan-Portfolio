@@ -1,8 +1,9 @@
 {% extends "components/main.html" %}
 
 {% block page_body %}
-
-<div class="wrapper"  id="top">
+<link rel="stylesheet" href="{{url_for('static', filename='css/experience.css')}}">
+<div class="w3-container card-bg-color" style="padding:64px 16px" id="experience">
+  <div class="wrapper"  id="top">
     <div class="center-line">
       <a href="#" class="scroll-icon"><i class="fa fa-caret-up fa-bounce"></i></a>
     </div>
@@ -23,7 +24,7 @@
             <i>{{ experience[2]}}</i>
             <span class="experience-type">{{ experience[5]}}</span>
           </div>
-          <hr/>
+          <hr class="project-hr">
           <div class="experience-description">
             {{ experience[6]|safe }}
           </div>
@@ -57,5 +58,6 @@
       </section>
     </div> -->
   </div>
+</div>
 
   {% endblock %}

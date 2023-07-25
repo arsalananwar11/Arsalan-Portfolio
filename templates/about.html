@@ -1,0 +1,28 @@
+{% extends "components/main.html" %}
+
+{% block page_body %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+
+<div class="w3-container base-bg-color-2" style="padding:128px 16px" id="about">
+    <div class="about">
+      <div class="w3-col m9">
+        <h3>About Arsalan</h3>
+        <p>
+          Arsalan is a data science enthusiast who is currently working as a Data Scientist in a 
+          Martket Intelligence MNC based out of Bangalore, India. He is the founder and researcher at 
+          Data Science Crew which is a platform for data science enthusiasts to collaborate and work on 
+          exciting AI/ML problems. Arsalan is also an Adjunct Faculty at Intellipaat where he handles few 
+          Data Science PGP programs which are in collaboration with MIT and IIT-M.
+        </p>
+        <p>
+          <a href="#seminar" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Seminars</a>
+          <a href="#research" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Research</a>
+          <a href="{{ url_for('projects') }}" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Projects</a>
+        </p>
+      </div>
+      <div class="w3-col m3">
+        <img class="w3-image w3-round-large about-pic" src="https://th.bing.com/th/id/OIP.5fpEn8_U0Yz5ct2HGu4KbAAAAA?w=164&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="About" width="200" height="220">
+      </div>
+    </div>
+  </div>
+{% endblock %}
