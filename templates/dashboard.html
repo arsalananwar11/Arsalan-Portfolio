@@ -18,29 +18,21 @@
   </div> 
   <div class="w3-col m7 w3-right">
     <div class="slideshow-container">
-
+      {% set ss_list = ["ss_1.jpg" , "ss_2.jpg", "ss_3.jpg", "ss_4.jpg", "ss_5.jpg"] %}
+      {%for ss_img in ss_list%} 
       <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="./../static/img/defectdetection.jpg" style="width:100%; height: 350px;">
-        <div class="text">Caption Text</div>
+        <!-- <div class="numbertext">i / 3</div> -->
+        <img src="./../static/img/{{ss_img}}" style="width:100%; height: 350px;">
+        <!-- <div class="text">{{ss_img}}</div> -->
       </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="./../static/img/mumkinfoods.jpg" style="width:100%; height: 350px">
-        <div class="text">Caption Two</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="./../static/img/cra.jpg" style="width:100%; height: 350px">
-        <div class="text">Caption Three</div>
-      </div>
+      {%endfor%}
       
       </div>
       <br>
       
       <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
         <span class="dot"></span> 
         <span class="dot"></span> 
         <span class="dot"></span> 
@@ -68,8 +60,8 @@
         Data Science PGP programs which are in collaboration with MIT and IIT-M.
       </p>
       <p>
-        <a href="#seminar" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Seminars</a>
-        <a href="#research" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Research</a>
+        <!-- <a href="#seminar" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Seminars</a>
+        <a href="#research" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Research</a> -->
         <a href="#projects" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Projects</a>
       </p>
     </div>
