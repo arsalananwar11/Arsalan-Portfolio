@@ -8,9 +8,8 @@
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container" id="top">
   <div class="w3-display-left w3-col m5" style="padding:24px">
-    <div>
+    <div class="text-container">
       <span class="cover-name-text w3-hide-small">Arsalan Anwar</span><br>
-      <span class="w3-large w3-hide-large w3-hide-medium">Arsalan Anwar</span><br>
       <span class="cover-name-desc">Data Scientist, Researcher, Blogger.</span>
     </div>
     
@@ -18,7 +17,7 @@
   </div> 
   <div class="w3-col m7 w3-right">
     <div class="slideshow-container">
-      {% set ss_list = ["ss_1.jpg" , "ss_2.jpg", "ss_3.jpg", "ss_4.jpg", "ss_5.jpg"] %}
+      {% set ss_list = ["ss_2.jpg" , "ss_3.jpg", "ss_1.jpg", "ss_4.jpg", "ss_5.jpg"] %}
       {%for ss_img in ss_list%} 
       <div class="mySlides fade">
         <!-- <div class="numbertext">i / 3</div> -->
@@ -63,6 +62,8 @@
         <!-- <a href="#seminar" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Seminars</a>
         <a href="#research" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Research</a> -->
         <a href="#projects" class="w3-button secondary-color margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-th"> </i> Projects</a>
+        <a href="https://github.com/arsalananwar11" target="_blank" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-github"> </i> My Github</a>
+        <a href="https://www.linkedin.com/in/arsalan-anwar-ai" target="_blank" class="w3-button secondary-color  margin-2 about-btn text-white secondary-color-btn"><i class="fa fa-linkedin"> </i> My LinkedIn</a>
       </p>
     </div>
     <div class="w3-col m3">
@@ -108,16 +109,24 @@
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> <a href="mailto:arsalan.anwar@nyu.edu" style="text-decoration: none;">arsalan.anwar@nyu.edu</a></p>
     <br>
     <form action="{{ url_for('send_message') }}" method="post">
-      <p class="w3-col m5"><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p class="w3col m1"></p>
-      <p class="w3-col m5 w3-right"><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="textarea" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button secondary-color secondary-color-btn text-white w3-right" style="margin-right: 10px;" type="submit">
+      <div>
+        <div class="w3-half">
+          <input class="w3-input border-4" type="text" placeholder="Name" required name="Name">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input border-4" type="email" placeholder="Email" required name="Email">
+        </div>
+        <div>
+          <input class="w3-input border-4" type="text" placeholder="Subject" required name="Subject">
+        </div>
+        <div>
+          <input class="w3-input border-4" type="textarea" placeholder="Message" required name="Message">
+        </div>
+        
+        <button class="w3-button secondary-color secondary-color-btn text-white w3-right border-4" style="margin-right: 10px;" type="submit">
           <i class="fa fa-paper-plane"></i> &nbsp;Message Arsalan
         </button>
-      </p>
+      </div>
     </form>
   </div>
 </div>
